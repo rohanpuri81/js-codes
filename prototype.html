@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototype</title>
+</head>
+<body>
+    
+    <script>
+        function Student(first,last,age,cls){
+          this.firstName=first;
+          this.lastName=last;
+          this.age=age;
+          this.class=cls;
+        }
+
+        let st1 = new Student("Prakash","Puri",24,"lastYear");
+        let st2 = new Student("Abdul","Hamid",23,"firstYear");
+
+        Student.prototype.nationality="Indian";
+        Student.prototype.name=function(){
+            return this.firstName+" "+this.lastName;
+        }
+
+        console.log(st1);
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON Data</title>
+</head>
+<body>
+    
+    <script>
+        let data=`{
+    "name":"rohan",
+    "age":20,
+    "is_studen":true,
+    "passport_no":null,
+    "p_lang":["c++","java","python"],
+    "address":{
+        "city":"Pune",
+        "state":"Maharashtra",
+        "pincode":410506
+    }
+}`;
+     
+        //  let dObject = JSON.parse(data);
+        //  console.log(dObject["p_lang"][2]);
+
+         let kata = JSON.stringify(data);
+         console.log(kata);
+    </script>
+</body>
+</html>

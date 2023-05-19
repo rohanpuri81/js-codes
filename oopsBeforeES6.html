@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOPs before ES6</title>
+</head>
+<body>
+    <script>
+        //----------------------------WAY 1---------------------------------
+        
+        // let person1={
+        //     firstName:'ranbir',
+        //     lastName:'kapoor',
+        //     age:42,
+
+        //     fullName:function(){
+        //        console.log(this.firstName++this.lastName);  
+        //     }
+        // }
+        //================================================================
+
+        //-----------------------------WAY 2--------------------------------
+        
+        // let person={};
+        // person.name="prakash jhakanjhule";
+        // person.sayHi=function(){
+        //     console.log("Hii pakya");
+        // }
+        
+        // person.sayHi();
+        //=================================================================
+
+        //-----------------------------WAY 3---------------------------------
+          
+        //   let person=new Object();
+
+        //===================================================================
+        
+        //------------------------------WAY 4----------------------------------
+        //   /* function name started with a capital letter
+        //      will be considered as a construtor function */
+        //   function Person(first,last,a){
+        //       this.firstName=first;
+        //       this.lastName=last;
+        //       this.age=a;
+
+
+        //       this.sayHi=function(){
+        //         alert("hi");
+        //       }
+
+        //       this.changeAge=function(newAge){
+        //         this.age=newAge;
+        //       }
+        //   }
+
+        //   let person1 = new Person("rohan","puri",20);
+        //   //  this will create a object using the above function
+        //   //  Person {firstName: 'rohan', lastName: 'puri', age: 20}
+
+        //   let person2 = new Person("rushi","puri",18);
+        //   console.log(person1);
+        //   console.log(person2);
+        //   person2.changeAge(20);
+        //   console.log(person2);
+
+        //========================================================================
+        //  function student(name,rollno,marks){
+        //     this.name=name
+        //     this.rollno=rollno
+        //     this.marks= marks
+        //     this.getMarks=function(){
+        //         console.log(this.marks)
+        //     }
+        //  }   
+         
+        // //  let rohan = new student("rohan",68,73);
+        //  console.log(rohan)
+        //  rohan.getMarks()
+         
+         function Employee(name,project,exp,company,isCapable){
+            this.name=name
+            this.exp=exp;
+            this.project=project
+            this.company=company
+            this.isCapable=isCapable
+
+            this.getExp=()=>{
+                console.log(exp +" experience");
+            }
+
+            this.getProject=()=>{
+                console.log(project)
+            }
+
+         }
+
+         let rohan = new Employee("Rohan","Ticket booking","1year","Ifeanet",true);
+         console.log(rohan);
+         rohan.getExp();
+         rohan.getProject();
+    </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Bubbling</title>
+    <style>
+        body{
+            height: 100vh;
+            width: 100vw;
+        }
+        div{
+           background-color: navy;
+           height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <button>Like me</button>
+    </div>
+
+    <script>
+        let body = document.body;
+        let div = document.querySelector("div");
+        let btn = document.querySelector("button");
+
+        div.addEventListener('click',(event)=>{
+            event.stopPropagation();
+            console.log("div click");
+        });
+        
+        btn.addEventListener('click',(event)=>{
+            event.stopPropagation();
+            console.log("button click");
+        })
+
+        body.addEventListener('click',(event)=>{
+           event.stopPropagation();
+            console.log("body click");
+        });
+        
+    </script>
+</body>
+</html>

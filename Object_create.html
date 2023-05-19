@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object.create</title>
+</head>
+<body>
+    
+    <script>
+
+        var person={
+            city:"london",
+            calculateAge:function(){
+                var currentYear = new Date().getFullYear();
+                let age = currentYear-this.YearOfBirth;
+                console.log(age);
+            }
+        }
+
+        let john = Object.create(person);
+        john.YearOfBirth=2002;
+        john.calculateAge();
+        john.work = "teacher";
+        console.log(john)
+
+        let mark = Object.create(person,{
+            name:{value:"mark"},
+            YearOfBirth:{value:1999}
+        })
+        mark.calculateAge();
+        console.log(mark)
+    </script>
+</body>
+</html>

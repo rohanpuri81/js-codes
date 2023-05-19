@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice</title>
+</head>
+<body>
+    
+    <script>
+      let a = fetch("https://reqres.in/api/users?page=2");
+      a.then((value)=>{
+        return value.json();
+      }).then((v2)=>{
+        for(let i=0;i<v2.data.length;i++){
+            let img = document.createElement("img");
+        img.src=v2.data[i].avatar
+        console.log(v2.data[i].avatar);
+        document.body.appendChild(img);
+        }
+      })
+
+
+       function showtime(x){
+        console.log(x);
+       }
+
+      async function getData(){
+        try{
+        let res = await fetch("https://reqres.in/api/users?page=2");
+        console.log(res);
+        let secRes= await res.json();
+        console.log(secRes);
+        }catch(err){
+            console.log(err);
+        }finally{
+            console.log("jay maharashtra");
+        }
+      }
+      getData();
+
+
+      fact();
+      var fact=function (){
+        console.log("vfr");
+      }
+    </script>
+</body>
+</html>

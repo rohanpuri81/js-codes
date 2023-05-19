@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>argument object</title>
+</head>
+<body>
+    
+    <script>
+        function add(){
+            arguments;
+            console.log(arguments);
+            if(arguments.length==0){
+                console.log("no arguments passed");
+            }else{
+                let total=0;
+            for(let i=0;i<arguments.length;i++){
+               total+=arguments[i];
+            }
+            console.log(total)
+            }
+        }
+
+        add(45,85,58,63,01,62);
+    </script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+{
+    "name":"rohan",
+    "age":20,
+    "is_studen":true,
+    "passport_no":null,
+    "p_lang":["c++","java","python"],
+    "address":{
+        "city":"Pune",
+        "state":"Maharashtra",
+        "pincode":410506
+    }
+}

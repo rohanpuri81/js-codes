@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>object</title>
+</head>
+<body>
+    <script>
+        let key ="address";
+        let phone =12121212;
+        let email = "abc@bbc.com"
+        const user={
+            name:"rohan",
+            age:25,
+            isDevloper:true,
+            getData:function(){
+                return this.city;
+            },
+            inner:{
+                kaka:"nana"
+            },
+            [key]:"Gahziabad UP India",
+            phone,
+            email
+            
+        };
+       
+            user["pin code"]=413512;
+            delete user.age;
+            console.log(user.city)
+            user.city="newYork"
+            x=20;
+            console.log(user)
+            console.log('state' in user)
+
+
+        let emp ={
+            peter:100,
+            bruce:200,
+            tony:300
+        }
+        let totalSalery=0;
+        for(item in emp){
+            totalSalery+=emp[item];
+        }
+
+        console.log(totalSalery);
+    </script>
+</body>
+</html>
